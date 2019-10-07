@@ -2,18 +2,35 @@
 @import 'normalize';
 @import 'fonts';
 
+/* Variables */
+$active-color: #db3259;
+$sub-active-color: #1a506c;
+$white: #fff;
+
+$main-font: 'Roboto', sans-serif;
 
 /* Common */
 *, *::after, *::before {
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
+html {
   font-size: 10px;
+}
+
+body {
+  font-family: $main-font;
+  font-size: 1.4rem;
+  line-height: 1.2;
 }
 
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  padding: 0 15px;
 }
+
+/* Blocks */
+@import 'blocks/nav';
+@import 'blocks/main';
+@import 'blocks/header';

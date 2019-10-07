@@ -1,0 +1,116 @@
+/* Navigation */
+.nav {
+  background: url('../img/nav/bg.jpg') center center no-repeat;
+  background-size: cover;
+  padding: 2.5rem 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    color: $white;
+    font-family: $main-font;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 6.5rem;
+    margin-top: -0.5rem;
+
+    &-amp {
+      color: $active-color;
+      font-size: 2.4rem;
+    }
+  }
+
+  &-menu {
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    &__item {
+      list-style: none;
+      border-right: 1px dashed rgba($white, .1);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    &__link {
+      display: block;
+      color: $white;
+      font-family: $main-font;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: .2s;
+      padding: 1.5rem 2rem;
+
+      &:hover {
+        color: $active-color;
+      }
+    }
+
+    &-hamburger {
+      height: 40px;
+      width: 60px;
+      position: relative;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      border-right: 1px dashed rgba($white, .1);
+      border-left: 1px dashed rgba($white, .1);
+      padding: 0;
+      margin-left: auto;
+
+      &:focus {
+        .nav-menu-hamburger__line,
+        .nav-menu-hamburger__line::before,
+        .nav-menu-hamburger__line::after {
+          background-color: $active-color;
+        }
+      }
+
+      &_active &__line {
+        background-color: transparent;
+      }
+
+      &_active &__line::after {
+        transform: rotate(-45deg);
+      }
+
+      &_active &__line::before {
+        transform: rotate(45deg);
+      }
+
+      &__line,
+      &__line::after,
+      &__line::before {
+        display: block;
+        position: absolute;
+        content: '';
+        width: 25px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $white;
+        transition: all .2s ease-in;
+      }
+
+      &__line {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &::after {
+          transform: translate(0, -5px);
+        }
+
+        &::before {
+          transform: translate(0, 5px);
+        }
+      }
+    }
+  }
+}
