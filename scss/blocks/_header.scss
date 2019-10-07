@@ -1,0 +1,21 @@
+.header {
+  background-color: rgba(#222, .4);
+  padding: 2rem 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__btn {
+    margin-right: 0.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

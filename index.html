@@ -8,6 +8,8 @@
 
   <title>Basketball &amp; Life</title>
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -36,11 +38,63 @@
   <div class="main-wrapper">
 
     <!-- Header -->
-    <header class="header" style="height: 100vh">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__btns">
+            <button class="header__btn btn">Сегодня</button>
+            <button class="header__btn btn">Завтра</button>
+            <button class="header__btn btn">13.08.2016</button>
+          </div>
+          <div class="teams-wrapper">
+            <div class="header__slider teams swiper-container">
+              <ul class="teams__list swiper-wrapper">
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/01.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/02.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/03.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/04.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/05.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/06.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/07.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/08.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/09.png" alt="#" class="teams__img"></a>
+                </li>
+                <li class="teams__item swiper-slide">
+                  <a href="#" class="teams__link"><img src="img/teams/10.png" alt="#" class="teams__img"></a>
+                </li>
+              </ul>
+            </div>
+            <button class="teams__btn teams__btn_prev"></button>
+            <button class="teams__btn teams__btn_next"></button>
+          </div>
+        </div>
+      </div>
     </header>
+
+    <!-- Main -->
+    <main class="main"></main>
   </div>
 
 
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <!-- Main JS -->
   <script src="js/main.js"></script>
 </body>

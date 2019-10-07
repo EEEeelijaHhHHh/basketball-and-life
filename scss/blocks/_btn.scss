@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  color: $white;
+  font-family: $main-font;
+  font-size: 1.4rem;
+  font-weight: 400;
+  min-width: 120px;
+  padding: 1.5rem 3rem;
+
+  text-decoration: none;
+  background-color: $active-color;
+  border: none;
+  outline: none;
+  border-radius: .5rem;
+  cursor: pointer;
+
+  transition: .2s;
+  &:hover, &:focus {
+    background-color: darken($active-color, 10%);
+  }
+}
