@@ -5,7 +5,8 @@
   font-size: 1.4rem;
   font-weight: 400;
   min-width: 120px;
-  padding: 1.5rem 3rem;
+  padding: 1rem 2.3rem;
+  line-height: 1;
 
   text-decoration: none;
   background-color: $active-color;
@@ -17,5 +18,9 @@
   transition: .2s;
   &:hover, &:focus {
     background-color: darken($active-color, 10%);
+  }
+
+  &_lg {
+    min-width: 140px;
   }
 }

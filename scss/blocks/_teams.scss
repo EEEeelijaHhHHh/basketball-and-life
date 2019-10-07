@@ -39,7 +39,10 @@
 
   &__btn {
     position: absolute;
-    display: block;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     top: 50%;
     transform: translate(0, -50%);
     width: 20px;
@@ -58,6 +61,18 @@
     }
     &_prev {
       left: -30px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    position: relative;
+    height: 9px;
+    &_left {
+      left: -1px
+    }
+    &_right {
+      right: -1px;
     }
   }
 }

@@ -10,6 +10,10 @@ $white: #fff;
 $main-font: 'Roboto', sans-serif;
 
 /* Common */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -36,3 +40,6 @@ body {
 @import 'blocks/header';
 @import 'blocks/btn';
 @import 'blocks/teams';
+@import 'blocks/bets';
+@import 'blocks/sidebar';
+@import 'blocks/footer';
