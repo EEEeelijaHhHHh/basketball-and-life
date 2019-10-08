@@ -40,6 +40,30 @@
       &:last-child {
         border-right: none;
       }
+
+      &_lg {
+        @media (max-width: $lg) {
+          display: none;
+        }
+      }
+
+      &_md {
+        @media (max-width: $md) {
+          display: none;
+        }
+      }
+
+      &_sm {
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+
+      &_xs {
+        @media (max-width: $xs) {
+          display: none;
+        }
+      }
     }
 
     &__link {
@@ -125,7 +149,7 @@
     visibility: hidden;
     opacity: 0;
     transition: transform .4s, opacity .4s, visibility .5s;
-    
+
     &_active {
       opacity: 1;
       transform: translate(0, 0);
@@ -147,6 +171,38 @@
       &:last-child {
         &::after {
           display: none;
+        }
+      }
+
+      &_lg {
+        display: none;
+
+        @media (max-width: $lg) {
+          display: block;
+        }
+      }
+
+      &_md {
+        display: none;
+
+        @media (max-width: $md) {
+          display: block;
+        }
+      }
+
+      &_sm {
+        display: none;
+
+        @media (max-width: $sm) {
+          display: block;
+        }
+      }
+
+      &_xs {
+        display: none;
+
+        @media (max-width: $xs) {
+          display: block;
         }
       }
     }
@@ -172,18 +228,18 @@
   &::after {
     position: absolute;
     content: '';
+    background: rgba(#000, 0);
+    height: 0;
+    width: 100%;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 4;
-    background: rgba(#000, 0);
-    transition: .2s;
+    transition: .4s;
   }
-  
+
   &_active {
     &::after {
       background: rgba(#000, .6);
+      height: 100%;
     }
   }
 }
