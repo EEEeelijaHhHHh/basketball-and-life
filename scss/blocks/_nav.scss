@@ -4,6 +4,10 @@
   background-size: cover;
   padding: 2.5rem 0;
 
+  &-wrapper {
+    position: relative;
+  }
+
   &__inner {
     display: flex;
     align-items: center;
@@ -65,24 +69,18 @@
       padding: 0;
       margin-left: auto;
 
-      &:focus {
-        .nav-menu-hamburger__line,
-        .nav-menu-hamburger__line::before,
-        .nav-menu-hamburger__line::after {
-          background-color: $active-color;
-        }
-      }
-
       &_active &__line {
         background-color: transparent;
       }
 
       &_active &__line::after {
         transform: rotate(-45deg);
+        background-color: $active-color;
       }
 
       &_active &__line::before {
         transform: rotate(45deg);
+        background-color: $active-color;
       }
 
       &__line,
@@ -111,6 +109,81 @@
           transform: translate(0, 5px);
         }
       }
+    }
+  }
+
+  &-dropdown {
+    position: absolute;
+    top: calc(100% + 2.5rem);
+    right: 15px;
+    background-color: $sub-active-color;
+    margin: 0;
+    padding: 1rem 0;
+    width: 320px;
+    z-index: 5;
+    transform: translate(0, -7%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform .4s, opacity .4s, visibility .5s;
+    
+    &_active {
+      opacity: 1;
+      transform: translate(0, 0);
+      visibility: visible;
+    }
+
+    &__item {
+      list-style: none;
+
+      &::after {
+        display: block;
+        content: '';
+        width: 90%;
+        height: 1px;
+        background-color: #487389;
+        margin: 0 auto;
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      color: $white;
+      font-size: 1.4rem;
+      text-decoration: none;
+      padding: 1.5rem 2.5rem;
+      transition: .2s;
+
+      &:hover {
+        background-color: rgba(#000, .2);
+      }
+    }
+  }
+}
+
+.hover {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    background: rgba(#000, 0);
+    transition: .2s;
+  }
+  
+  &_active {
+    &::after {
+      background: rgba(#000, .6);
     }
   }
 }

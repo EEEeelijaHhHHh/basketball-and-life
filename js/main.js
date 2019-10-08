@@ -13,3 +13,15 @@
     }
   })
 }());
+
+(function () {
+  const navBtn = document.querySelector('.nav-menu-hamburger');
+  const navDropdown = document.querySelector('.nav-dropdown');
+  const hoverItems = document.querySelectorAll('.hover');
+
+  navBtn.addEventListener('click', () => {
+    navDropdown.classList.toggle('nav-dropdown_active');
+    navBtn.classList.toggle('nav-menu-hamburger_active');
+    hoverItems.forEach(item => item.classList.toggle('hover_active'));
+  })
+}());
