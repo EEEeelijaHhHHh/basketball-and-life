@@ -1,5 +1,44 @@
 .sidebar {
   &-sub {
     background-color: $sub-active-color;
+    text-align: center;
+    padding: 3.15rem 2rem;
+
+    &__title {
+      color: $white;
+      font-size: 1.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    &__subtitle {
+      color: $white;
+      font-size: 1.4rem;
+    }
+
+    &__form {
+      display: flex;
+      justify-content: center;
+      padding-top: 2rem;
+    }
+
+    &__input {
+      height: 40px;
+      width: 100%;
+      color: #868686;
+      font-family: $main-font;
+      font-size: 1.3rem;
+      font-weight: 300;
+      border-radius: 5px 0 0 5px;
+      border: none;
+      padding: 0 1.5rem;
+
+      &::placeholder {
+        color: #868686;
+        font-family: $main-font;
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+    }
   }
 }

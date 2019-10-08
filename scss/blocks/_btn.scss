@@ -12,7 +12,7 @@
   background-color: $active-color;
   border: none;
   outline: none;
-  border-radius: .5rem;
+  border-radius: 5px;
   cursor: pointer;
 
   transition: .2s;
@@ -20,7 +20,19 @@
     background-color: darken($active-color, 10%);
   }
 
+  &_sm {
+    min-width: 45px;
+    padding: 1rem;
+    border-radius: 0 5px 5px 0;
+  }
+
   &_lg {
     min-width: 140px;
+  }
+
+  &_full {
+    width: 100%;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
   }
 }
