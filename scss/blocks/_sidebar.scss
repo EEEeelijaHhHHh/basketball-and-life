@@ -135,6 +135,9 @@
       height: 35px;
       background-color: $active-color;
       border-radius: 50%;
+      &:hover, &:active {
+        background-color: darken($active-color, 10%);
+      }
     }
 
     &__icon {
