@@ -3,8 +3,29 @@
   height: 50px;
   margin-right: 3rem;
 
+  @media (max-width: $lg) {
+    width: 460px;
+  }
+
+  @media (max-width: $md) {
+    width: 230px;
+  }
+
+  @media (max-width: $sm) {
+    width: 500px;
+    margin-right: 0;
+  }
+
+  @media (max-width: $xs) {
+    width: 220px;
+  }
+
   &-wrapper {
     position: relative;
+
+    @media (max-width: $sm) {
+      margin: 1.5rem 0 0 0;
+    }
   }
 
   &__list {
@@ -25,6 +46,7 @@
     border: 1px solid #e8ecf2;
     background-color: transparent;
     border-radius: 50%;
+
     &:hover {
       .teams__img {
         transform: translate(0, -20%);
@@ -53,12 +75,24 @@
     outline: none;
     cursor: pointer;
     transition: .2s;
-    &:hover, &:focus {
+
+    &:hover,
+    &:focus {
       background-color: darken($active-color, 10%);
     }
+
     &_next {
       right: 0;
+
+      @media (max-width: $sm) {
+        right: -20px;
+      }
+
+      @media (max-width: $xs) {
+        right: -30px;
+      }
     }
+
     &_prev {
       left: -30px;
     }
@@ -68,9 +102,11 @@
     display: block;
     position: relative;
     height: 9px;
+
     &_left {
       left: -1px
     }
+
     &_right {
       right: -1px;
     }

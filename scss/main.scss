@@ -33,6 +33,12 @@ h6 {
 
 html {
   font-size: 10px;
+  @media (max-width: $lg) {
+    font-size: 8px;
+  }
+  @media (max-width: $md) {
+    font-size: 10px;
+  }
 }
 
 body {
