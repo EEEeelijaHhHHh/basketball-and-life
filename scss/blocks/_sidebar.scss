@@ -135,6 +135,7 @@
       height: 35px;
       background-color: $active-color;
       border-radius: 50%;
+      transition: .2s;
       &:hover, &:active {
         background-color: darken($active-color, 10%);
       }
